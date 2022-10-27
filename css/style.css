@@ -1,0 +1,177 @@
+/* configuración global */
+/* declarar unas constantes en colores y fuente */
+/* el root es la raíz de todo, para hacer las configuraciones repetitivas */
+:root{
+    /* fuentes */
+    --titulos:'Lato', sans-serif;
+    --parrafo:'Roboto', sans-serif;
+    /* colores base */
+    --encabezado:rgb(81, 16, 16);
+    --pie:#000;
+    --enlace:#fff;
+    --enlaceSobre:#d1911a;
+
+
+}
+
+/* titulos */
+h1,h2,h3,h4,h5,h6{
+    /* fuente */
+    font-family: var(--titulos);
+    text-align: center;
+}
+
+/* evitar desbordamientos, el (*) es el selector universal*/
+*{
+    box-sizing: border-box;
+
+}
+
+/* utilizar una selector de clase (.) y su nombre
+que hace referencia a una clase en el html*/
+.home-wrapper{
+    background-image: url('../images/categorias/book2.jpg');
+    background-size: cover;
+}
+
+/* encabezado header */
+header{
+    width: 100%;
+    /* posición fija */
+    position: fixed;
+    background-color: var(--encabezado);
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+header img{
+    width: 200px;
+}
+
+header nav{
+    float: right;
+    margin-top: 5px;
+}
+
+header nav a{
+    color: var(--enlace);
+    font-family: var(--parrafo);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 2px;
+    padding: 5px 8px;
+    font-size: 18px;
+
+}
+
+header nav a:hover{
+    color: var(--enlaceSobre);
+    
+}
+
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* sección home */
+/* identificador en css es (#)  */
+#home{
+    padding: 250px 0 260px;
+    text-align: center;
+
+}
+
+#home h1{
+    color: rgb(9, 9, 9);
+    font-weight: 700;
+    font-size: 3.8rem;
+    margin-bottom: 35px;
+
+}
+
+#home p{
+    font-family: var(--parrafo);
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+/* sección novedades */
+#novedades .box{
+    display: inline-block;
+    width: 33%;/*para dividir el ancho en tres*/
+    padding: 8px;
+}
+
+#novedades .box p{
+    text-align: justify;
+}
+
+#novedades .box img{
+    padding-left: 30%;
+    padding-bottom: 10px;
+}
+
+#novedades .box h3{
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* sección categoria */
+section{
+    padding-top: 80px;
+}
+
+#categoria .box{
+    display: inline-block;
+    width: 33%;
+    padding: 5px;
+}
+
+#categoria .box img{
+    width: 100%;
+}
+
+#categoria .box h3{
+    padding-top: 10px;
+}
+
+/* sección contacto */
+
+#contacto{
+    width: 100%;
+    background-image: url('../images/map-image.png');
+    background-color: #000;
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+#contacto h2{
+    color: #fff;
+}
+
+#contacto input,
+select,textarea{
+    width: 600px;
+    padding: 10px 5px;
+    font-family: var(--parrafo);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+
+/* footer */
+footer{
+    width: 100%;
+    background-color: var(--pie);
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 0;
+}
